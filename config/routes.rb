@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
   
-   resources :projects
-   root :to => 'projects#index'
+  resources :projects do
+
+    post 'abc', on: :collection
+end
+
+root 'projects#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

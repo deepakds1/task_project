@@ -1,0 +1,27 @@
+<li class="list-group-item list-group-item-info">
+
+  
+  <ul id="users_list">
+    <li data-userid="<%= project.id %>" class="<%='winner' if project.winner%>"><%= project.name %></li>
+    <li data-userid="<%= project.id %>" class="<%='winner' if project.winner%>"><%= project.task_name %></li>
+    <li data-userid="<%= project.id %>" class="<%='winner' if project.winner%>"><%= project.specific_task %></li>
+  </ul>
+
+
+
+
+
+  <span id="button" class="edit">
+    <%= link_to edit_project_path(project), remote: true do %>
+      <button class="btn btn-primary btn-xs">ADD TASK</button>
+    <% end %>
+
+
+    <%= link_to project, remote: true, method: :delete,
+                data: { confirm: 'Are you sure?' } do %>
+      <button class="btn btn-danger btn-xs">Delete!</button>
+    <% end %>
+  </span>
+</li>
+
+

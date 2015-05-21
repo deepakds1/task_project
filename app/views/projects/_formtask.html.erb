@@ -1,0 +1,5 @@
+<%= simple_form_for @project, remote: true do |f|   %>
+    <%= f.input :task_name %>
+    <%= f.input :specific_task %>
+  <%= f.button :submit %>
+<% end %>
